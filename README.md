@@ -1,6 +1,6 @@
 # Socket-Programming
 
-File Structure
+## File Structure
 cn2025-chat/
 ├─ README.md
 ├─ CMakeLists.txt
@@ -34,3 +34,30 @@ cn2025-chat/
 └─ scripts/
    ├─ run_server.sh
    └─ run_client.sh
+
+
+## User Command
+- REGISTER <username>
+
+- LOGIN <username> <listen_port>
+
+- LOGOUT
+
+- LIST
+
+## Error Format
+ERR <code>[: detail]
+
+- unknown_command
+
+- duplicate_username
+
+- already_logged_in
+
+- invalid_port
+
+- not_logged_in
+
+- no_such_user
+
+- bad_request

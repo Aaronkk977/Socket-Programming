@@ -64,7 +64,7 @@ quit                            # disconnects from the server
 ```
 
 ## Error Format
-```bash
+```ubantu
 ERROR <code>[: detail]
 ```
 **implemented codes:**

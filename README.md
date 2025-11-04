@@ -65,7 +65,7 @@ quit  # disconnects from the server
 
 ## Error Format
 ```bash
-ERR <code>[: detail]
+ERROR <code>[: detail]
 ```
 - unknown_command
 

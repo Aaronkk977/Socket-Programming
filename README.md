@@ -50,30 +50,32 @@ cmake .. && make -j
 ## User Command
 
 ```bash
-help # shows all commands
+help                            # shows all commands
 
-register <username>  # registers a new user
+register <username>             # registers a new user
 
 login <username> <listen_port>  # login
 
-logout  # logout current user
+logout                          # logout current user
 
-list  # list all logged in users: username address port_number
+list                            # list all logged in users: username address port_number
 
-quit  # disconnects from the server
+quit                            # disconnects from the server
 ```
 
 ## Error Format
 ```bash
 ERROR <code>[: detail]
 ```
-- unknown_command
+**implemented codes:**
 
-- duplicate_username
+- unknown_command: the server gets undefined command
 
-- already_logged_in
+- duplicate_username: the username already exists
 
-- invalid_port
+- already_logged_in: the user is already logged in
+
+- invalid_port: invalid port number
 
 ----------------- not implemented ------------------
 

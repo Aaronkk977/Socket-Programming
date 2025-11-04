@@ -18,11 +18,11 @@ struct SessionInfo {
     int         fd;            // 與 server 的 TCP fd
 };
 
-// 伺服器全域狀態（先用 extern，在 server_core.cpp 定義）
-extern std::unordered_set<std::string> registered_users;   // 已註冊
-extern std::unordered_map<std::string, SessionInfo> online;// 線上（user -> session）
-extern std::unordered_map<int, Conn> conns;                // fd -> 連線
+// server global state (use extern, define in server_core.cpp)
+extern std::unordered_set<std::string> registered_users;   // registered users
+extern std::unordered_map<std::string, SessionInfo> online_users;// online users (user -> session)
+extern std::unordered_map<int, Conn> conns;                // fd -> connection
 
-// 清理連線（關閉 fd、移除 conns、必要時從 online 下線）
+// clean up connection (close fd, remove conns, optionally remove from online)
 void close_conn(int fd);
 

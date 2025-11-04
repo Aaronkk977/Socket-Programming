@@ -9,5 +9,8 @@ add_executable(server
   src/common/proto.cpp src/common/net.cpp src/common/util.cpp)
 
 add_executable(client
-  src/client/main_client.cpp src/client/cli_shell.cpp
-  src/common/proto.cpp src/common/net.cpp src/common/util.cpp)
+  src/client/main_client.cpp
+  src/client/cli_shell.cpp
+  src/common/proto.cpp
+  src/common/net.cpp 
+  src/common/util.cpp)

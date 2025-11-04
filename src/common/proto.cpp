@@ -21,11 +21,11 @@ const char* const ERR_BAD_REQUEST = "bad_request";
 
 }
 
-std::string make_ok() {
-    return std::string(REPLY_OK) + "\n";
+std::string proto::make_ok() {
+    return std::string(proto::REPLY_OK) + "\n";
 }
 
-std::string make_err(const std::string& code, const std::string& detail) {
+std::string proto::make_err(const std::string& code, const std::string& detail) {
     if (detail.empty()) {
         return std::string("ERR ") + code + "\n";
     }
@@ -33,6 +33,6 @@ std::string make_err(const std::string& code, const std::string& detail) {
     return std::string("ERR ") + code + ":" + detail + "\n";
 }   // "ERR code[: detail]\n"
 
-std::string make_list_ok_header(size_t n) {
-    return std::string(REPLY_LIST_OK) + " " + std::to_string(n) + "\n";
+std::string proto::make_list_ok_header(size_t n) {
+    return std::string(proto::REPLY_LIST_OK) + " " + std::to_string(n) + "\n";
 }   // "LIST-OK n\n"

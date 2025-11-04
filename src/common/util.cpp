@@ -23,11 +23,10 @@ std::vector<std::string> tokenize(const std::string& s) { // split by space
         out.push_back(token);
     }
 
-    return out;
+    return out; // vector<string>
 }
 
-bool parse_port(const std::string& s, uint16_t& port,
-    int min_port = 1024, int max_port = 65535){ // parse port, return true if valid (1024-65535 by default)
+bool parse_port(const std::string& s, uint16_t& port, int min_port, int max_port){ // parse port, return true if valid (1024-65535 by default)
     
     // check if empty
     if (s.empty()) {

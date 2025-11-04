@@ -38,15 +38,30 @@ cn2025-chat/
     └── run_client.sh
 ```
 
+## Build
+```bash
+
+mkdir -p build && cd build
+cmake .. && make -j
+
+```
+
 
 ## User Command
-- REGISTER <username>
 
-- LOGIN <username> <listen_port>
+```bash
+help # shows all commands
 
-- LOGOUT
+register <username> 
 
-- LIST
+login <username> <listen_port>
+
+logout
+
+list  # list all logged in users: username address port_number
+
+quit  # disconnects from the server
+```
 
 ## Error Format
 ```bash
@@ -59,6 +74,8 @@ ERR <code>[: detail]
 - already_logged_in
 
 - invalid_port
+
+----------------- not implemented ------------------
 
 - not_logged_in
 

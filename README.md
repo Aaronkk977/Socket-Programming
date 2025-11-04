@@ -3,7 +3,7 @@
 ## File Structure
 
 ```
-cn2025-chat/
+SOCKET-PROGRAMMING/
 ├── README.md
 ├── CMakeLists.txt
 ├── include/
@@ -34,8 +34,8 @@ cn2025-chat/
 │       ├── crypto.cpp (Phase 2)
 │       └── thread_pool.cpp (Phase 2)
 └── scripts/
-    ├── run_server.sh
-    └── run_client.sh
+    ├── run_server.sh (empty)
+    └── run_client.sh (empty)
 ```
 
 ## Build
@@ -52,11 +52,11 @@ cmake .. && make -j
 ```bash
 help # shows all commands
 
-register <username> 
+register <username>  # registers a new user
 
-login <username> <listen_port>
+login <username> <listen_port>  # login
 
-logout
+logout  # logout current user
 
 list  # list all logged in users: username address port_number
 
